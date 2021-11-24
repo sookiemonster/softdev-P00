@@ -2,33 +2,31 @@
 <html>
 
   <head>
-    <title> Login - Journal Square </title>
+    <title>Journal Square</title>
     <link href ="../static/css/style.css" rel ="stylesheet" type ="text/css">
   </head>
 
   <body>
-    <h1>
-      Login for Journal Square, a newfangled blog for the masses!
-    </h1>
-
-    {% if error %}
-    <h2 style="color: red;">Error: {{error}}</h2>
-    {% endif %}
-    <h3>
-      Enter your username below to proceed.
-    </h3>
-    <form action="/login" method="POST">
-      Username:
-      <input type="text" name="username">
-      <br>
-      Password:
-      <input type="password" name="password">
-      <br>
-      <input type="submit" name="sub1" value="Login">
-      <br>
-      <a href="/signup">Register</a>
-    </form>
-    <br>
+    <div class="layout-container">
+      <div class="header">
+        <h1>Journal Square</h1>
+        <h2>A newfangled blog for the masses!</h2>
+      </div>
+      {% if error %}
+        <span class="error">Error: {{error}}</span>
+      {% endif %}
+      <div class="login-container">
+        <h3>Enter your username below to proceed.</h3>
+        <form action="/login" method="POST">
+          <input class="credential-input" type="text" name="username" placeholder="Username">
+          <input class="credential-input" type="password" name="password" placeholder="Password">
+          <div class="button-container">
+            <input id="submit" class="button" type="submit" name="sub1" value="Login">
+            <a id="alt-submit" href="/signup">Register</a>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 
 </html>
