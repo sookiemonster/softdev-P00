@@ -2,8 +2,14 @@
 
 <html>
     <head>
-        <title>My Blog - Journal Square</title>
+        <title>My Blog</title>
         <link href ="../static/css/style.css" rel ="stylesheet" type ="text/css">
+        <link href ="../static/css/blog.css" rel ="stylesheet" type ="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet"> 
     </head>
 
     <body>
@@ -14,23 +20,28 @@
             <a href="/createPosts">Create New Post</a>
             <a href="/logout">Logout</a>
         </nav>
-        <h1>
-          My Blog Posts
-        </h1>
-        {% if error %}
-        <h2 style="color: red;">Error: {{error}}</h2>
-        {% endif %}
-        {% for blog in blogs %}
-        <hr>
-        <a href="/post/{{blog[0]}}"><h2>{{ blog[3] }}</h2></a>
-            {% if blog[5] != blog[2] %}
-            Posted: {{blog[2]}} (Edited: {{blog[5]}})
-            {% else %}
-            Posted: {{blog[2]}}
+        <div class="layout-container">
+            <h1>My Blog Posts</h1>
+            {% if error %}
+                <span class="error">Error: {{error}}</span>
             {% endif %}
-            <br>
-            <a href = "/editBlog/{{blog[0]}}">Edit</a>
-            <a href = "/deleteBlog/{{blog[0]}}">Delete</a>
-        {% endfor %}
+            {% for blog in blogs %}
+                <div class="post-container">
+                    <a class="post-title" href="/post/{{blog[0]}}">{{ blog[3] }}</a>
+                    <div class="datetime-container">
+                        {% if blog[5] != blog[2] %}
+                            <span class="post-datetime">Posted: {{blog[2]}}</span> 
+                            <span class="edit-datetime">(Edited: {{blog[5]}})</span>
+                        {% else %}
+                            <span class="post-datetime">Posted: {{blog[2]}}</span>
+                        {% endif %}
+                    </div>
+                    <div class="button-container">
+                        <a class="button edit" href = "/editBlog/{{blog[0]}}">Edit</a>
+                        <a class="button delete" href = "/deleteBlog/{{blog[0]}}">Delete</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </body>
 </html>

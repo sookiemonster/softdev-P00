@@ -1,0 +1,66 @@
+.layout-container {
+    padding: 100px 50px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+h1 {
+    font-family: var(--outfit);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.post-container {
+    display: grid;
+    grid-template-areas: "title datetime"
+                         "buttons buttons";
+    gap: 10px;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.post-title {
+    grid-area: title;
+    font-family: var(--outfit);
+    font-size: 1.5rem;
+
+    color: var(--dark-brown);
+}
+
+.datetime-container {
+    grid-area: datetime;
+    font-style: italic;
+    font-weight: 300;
+    font-family: var(--outfit);
+}
+
+.button-container {
+    grid-area: buttons;
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    padding: 12px 30px;
+    border: 2px solid var(--interact-orange);
+    border-radius: 12px;
+
+    font-family: var(--outfit);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--interact-orange);
+
+    cursor: pointer;
+    transition: background-color .1s ease-out,
+                color .1s ease-out;
+
+}
+
+.button:hover {
+    color: var(--white);
+    background-color: var(--interact-orange) !important;
+}

@@ -9,7 +9,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 25%;
+    margin-top: 25vh;
     gap: 40px;
 }
 
@@ -27,10 +27,6 @@ body {
 h1, h2, h3, .error {
     text-align: center;
     font-family: var(--outfit);
-}
-
-.error {
-    color: red;
 }
 
 h1 {
