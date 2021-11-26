@@ -18,9 +18,9 @@
         <h2>A newfangled blog for the masses</h2>
       </div>
       <div class="login-container center-children">
-        <!-- {% if error %}
+        {% if error %}
           <span class="error">Error: {{error}}</span>
-        {% endif %} -->
+        {% endif %}
         <form action="/login" method="POST">
           <div class="center-children">
             <input class="credential-input" type="text" name="username" placeholder="Username">
@@ -28,7 +28,7 @@
             <div class="button-container">
               <input id="submit" class="button" type="submit" name="sub1" value="Login">
               <a class="button" id="alt-submit" href="/signup">Register</a>
-          </div>
+            </div>
           </div>
         </form>
       </div>

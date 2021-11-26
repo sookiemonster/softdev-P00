@@ -2,36 +2,36 @@
 <html>
 
   <head>
-    <title> SIGN UP PAGE </title>
-    <link href ="../static/css/style.css" rel ="stylesheet" type ="text/css">
-  </head>
+    <title>Register</title>
+    <link href ="../static/css/style.css" rel ="stylesheet" type="text/css">
+    <link href="../static/css/login.css" rel="stylesheet" type="text/css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">   </head>
   <body>
-    <h1>
-      Signup - Journal Square
-    </h1>
-
-    {% if error %}
-    <h2 style="color: red;">Error: {{error}}</h2>
-    {% endif %}
-    <h3>
-      Create your account for Journal Square, a newfangled blog, below!
-    </h3>
-    <form action="/signup" method="POST">
-      Display Name:
-      <input type="text" name="displayName">
-      <br>
-      Username:
-      <input type="text" name="username">
-      <br>
-      Password:
-      <input type="password" name="password">
-      <br>
-      <input type="submit" name="sub1" value="Register">
-      <br>
-      <a href="/login">Login</a>
-    </form>
-    <br>
+    <div class="layout-container">
+      <div class="header">
+        <h1>Journal <span class="highlight">Square</span></h1>
+        <h2>Create your new account here</h2>
+      </div>
+      <div class="login-container center-children">
+        {% if error %}
+          <span class="error">Error: {{error}}</span>
+        {% endif %}
+        <form action="/signup" method="POST">
+          <div class="center-children">
+            <input class="credential-input" type="text" name="displayName" placeholder="Display Name">
+            <input class="credential-input" type="text" name="username" placeholder="Username">
+            <input class="credential-input" type="password" name="password" placeholder="Password">
+            <div class="button-container">
+              <input id="submit" class="button" type="submit" name="sub1" value="Register">
+              <a class="button" id="alt-submit" href="/login">Login</a>
+            </div>
+          </div> 
+        </form>
+      </div>
+    </div>
   </body>
-
 </html>
+    

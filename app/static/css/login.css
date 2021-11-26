@@ -29,6 +29,10 @@ h1, h2, h3, .error {
     font-family: var(--outfit);
 }
 
+.error {
+    color: red;
+}
+
 h1 {
     font-size: 3rem;
     font-weight: 500;
