@@ -1,0 +1,28 @@
+:root {
+    --white: #ececec;
+    --light-gray: #e7e7e7;
+    --light-brown: #FFE7C5;
+    --med-brown: #9B674F;
+    --dark-brown: #3b2d2a;
+    --dark-gray: #1d1d1d;
+    --interact-orange: #e86127;
+    --interact-dark-orange: #C33F22;
+    --black: #000000;
+
+    --outfit: 'Outfit', sans-serif;
+    font-size: 16px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+} 
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+

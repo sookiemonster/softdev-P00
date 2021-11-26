@@ -1,0 +1,100 @@
+body {
+    background: rgb(42,8,8);
+    background: linear-gradient(326deg, rgba(42,8,8,1) 6%, rgba(128,63,18,1) 55%, rgba(195,142,107,1) 100%); 
+}
+
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25%;
+    gap: 40px;
+}
+
+.center-children {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.highlight {
+    color: var(--light-gray);
+}
+
+h1, h2, h3, .error {
+    text-align: center;
+    font-family: var(--outfit);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 300;
+    color: var(--black);
+}
+
+h3 {
+    font-weight: 300;
+    color: var(--white);
+}
+
+input {    
+    display: block;
+}
+
+.login-container {
+    background: rgba(255,255,255, 0.05);
+    border-radius: 30px;    
+    border-top: solid 1px rgba(255,255,255, 0.5);
+    border-left: solid 1px rgba(255,255,255, 0.5);
+    padding: 40px;
+}
+
+.credential-input {
+    width: 300px;
+    padding: 13px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--light-gray);
+}
+
+.button-container {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.button {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 12px;
+
+    font-family: var(--outfit);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--black);
+
+    cursor: pointer;
+    transition: background-color .1s ease-out,
+                color .1s ease-out;
+}
+
+.button:hover {
+    color: var(--white);
+    background-color: var(--interact-orange) !important;
+}
+
+#alt-submit {
+    color: var(--white);
+    background-color: none;
+    border: 3px solid var(--interact-orange)
+}
