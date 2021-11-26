@@ -4,16 +4,17 @@
     <head>
         <title>Journal Square</title>
         <link href ="../static/css/style.css" rel ="stylesheet" type ="text/css">
+        <link href ="../static/css/homepage.css" rel ="stylesheet" type ="text/css">
     </head>
 
     <body>
-      <nav class="nav-bar">
-        <a href="/">Home</a>
-        <a href="/search">Search</a>
-        <a href="/myBlog">My Blog</a>
-        <a href="/createPosts">Create New Post</a>
-        <a href="/logout">Logout</a>
-      </nav>
+        <div id="navbar">
+          <a href="/search">Search</a>
+          <a href="/myBlog">My Blog</a>
+          <a href="/createPosts">Create New Post</a>
+          <a href="/logout">Logout</a>
+        </div>
+        <div id="not_navbar">
         <h1>
           Journal Home
         </h1>
@@ -29,8 +30,8 @@
                 <option value ="content">Content</option>
               </select>
               <br>
-                <input type="text" name="query">
-                <input type = "submit" name = "search" value = "Search">
+                <input id="txt_fld" type="text" name="query">
+                <input id="submit_btn" type = "submit" name = "search" value = "Search">
             </form>
         </h3>
         <h2>Most Recent Posts</h2>
@@ -42,5 +43,6 @@
         <br>
         <br>
         {% endfor %}
+      </div>
     </body>
 </html>

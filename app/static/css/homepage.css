@@ -1,0 +1,78 @@
+body {
+background-color:var(--page-color);
+margin:0px;
+}
+
+#not_navbar {
+  margin-left: 40px;
+}
+
+#navbar {
+  background-color: var(--navbar-background-color);
+  overflow: hidden;
+  width: 100%;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+#navbar a{
+  text-decoration: var(--navbar_decor);
+  position: relative;
+  margin-right: 20px;
+  margin-left: 30px;
+  transition: 0.5s;
+}
+
+#navbar a:hover {
+  background-color: green;
+  color: gold;
+}
+
+
+#txt_fld {
+  background-color: lightsteelblue;
+  border-radius: 5px;
+  transition: 0.6s;
+}
+
+#txt_fld:focus {
+  background-color: black;
+  color: lightsteelblue;
+}
+
+#submit_btn {
+  background-color: lightsteelblue;
+  color: black;
+  transition: 0.5s;
+  padding: 8px;
+  font-size:16px;
+  border-radius: 5px;
+  border-color: lightsteelblue;
+  font-family: var(--font);
+}
+
+#submit_btn:hover {
+  background-color: black;
+  color: lightsteelblue;
+}
+
+select {
+  background-color: lightsteelblue;
+  color: black;
+  font-family: var(--font);
+  transition: 0.5s;
+}
+
+select:focus {
+  color: lightsteelblue;
+  background-color: black;
+}
+
+option:hover {
+  background-color: white;
+  color: crimson;
+}
+
+html {
+  font-family: var(--font);
+}
