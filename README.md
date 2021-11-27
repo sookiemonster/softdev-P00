@@ -1,3 +1,9 @@
+# Espresso Knights - Alif Abdullah [Eagle in the Sand], Daniel Sooknanan [Sussy]
+# SoftDev
+# K20 - Adding CSS to our classmates' projects
+# time spent: 2.5 hours
+
+
 # Journal Square by Team: Mates
 
 ## Roles
@@ -5,6 +11,10 @@
 - Andy Lin: backend
 - Shadman Rakib: backend and database
 - Raymond Yeung: frontend and website
+
+K20 Additions:
+- Daniel Sooknanan: CSS Extraordinaire
+- Alif Abdullah: The other CSS Guy
 
 ## How to use
 
