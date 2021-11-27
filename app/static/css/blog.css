@@ -64,3 +64,23 @@ h1 {
     color: var(--white);
     background-color: var(--interact-orange) !important;
 }
+
+/* EDIT POST STYLING */
+
+.edit-post-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-descriptor {
+    font-family: var(--outfit);
+    font-weight: 300;
+}
+
+.input-descriptor:last-of-type {
+    margin-top: 10px;
+}
+
+.post-content {
+    margin-bottom: 20px;
+}

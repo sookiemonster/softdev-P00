@@ -1,38 +1,15 @@
 body {
-background-color:var(--page-color);
-margin:0px;
+  background-color:var(--page-color);
 }
 
-#not_navbar {
-  margin-left: 40px;
+.layout-container {
+  padding: 80px 50px 0;
 }
-
-#navbar {
-  background-color: var(--navbar-background-color);
-  overflow: hidden;
-  width: 100%;
-  margin-top: 0px;
-  margin-left: 0px;
-}
-
-#navbar a{
-  text-decoration: var(--navbar_decor);
-  position: relative;
-  margin-right: 20px;
-  margin-left: 30px;
-  transition: 0.5s;
-}
-
-#navbar a:hover {
-  background-color: green;
-  color: gold;
-}
-
 
 #txt_fld {
   background-color: lightsteelblue;
   border-radius: 5px;
-  transition: 0.6s;
+  transition: 0.15s;
 }
 
 #txt_fld:focus {
@@ -43,7 +20,7 @@ margin:0px;
 #submit_btn {
   background-color: lightsteelblue;
   color: black;
-  transition: 0.5s;
+  transition: 0.15s;
   padding: 8px;
   font-size:16px;
   border-radius: 5px;
@@ -60,7 +37,7 @@ select {
   background-color: lightsteelblue;
   color: black;
   font-family: var(--font);
-  transition: 0.5s;
+  transition: 0.15s;
 }
 
 select:focus {

@@ -11,9 +11,6 @@
     --page-color: papayawhip;
     --font: "Century Gothic";
     --outfit: 'Outfit', sans-serif;
-    --padding: 25px;
-    --navbar_decor: none;
-    --navbar-background-color: lightsteelblue;
     font-size: 16px;
 }
 
@@ -44,7 +41,6 @@ body {
     padding: 20px 30px;
     background: rgb(42,8,8);
     background: linear-gradient(326deg, rgba(42,8,8,1) 6%, rgba(128,63,18,1) 55%, rgba(195,142,107,1) 100%); 
-    border-bottom: 4px solid var(--dark-brown);
 }
 
 .nav-bar a:first-child {

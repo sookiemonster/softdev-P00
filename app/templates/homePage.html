@@ -5,44 +5,50 @@
         <title>Journal Square</title>
         <link href ="../static/css/style.css" rel ="stylesheet" type ="text/css">
         <link href ="../static/css/homepage.css" rel ="stylesheet" type ="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet"> 
     </head>
 
     <body>
-        <div id="navbar">
+        <nav class="nav-bar">
+          <a href="/">Home</a>
           <a href="/search">Search</a>
           <a href="/myBlog">My Blog</a>
           <a href="/createPosts">Create New Post</a>
           <a href="/logout">Logout</a>
+        </nav>
+        <div class="layout-container">
+          <h1>
+            Journal Home
+          </h1>
+          {% if error %}
+          <span class="error">Error: {{error}}</span>
+          {% endif %}
+          <h3>
+              <form action="/search" method="POST">
+                <label for="options">Search By:</label>
+                <select name = "options" id = "options">
+                  <option value ="author">Author</option>
+                  <option value ="title">Title</option>
+                  <option value ="content">Content</option>
+                </select>
+                <br>
+                  <input id="txt_fld" type="text" name="query">
+                  <input id="submit_btn" type = "submit" name = "search" value = "Search">
+              </form>
+          </h3>
+          <h2>Most Recent Posts</h2>
+          {% for blog in blogs %}
+          <hr>
+          <a href="/post/{{blog[0]}}"><h2>{{ blog[3] }}</h2></a>
+          by {{ blog[1] }}
+          <br>
+          <br>
+          <br>
+          {% endfor %}
         </div>
-        <div id="not_navbar">
-        <h1>
-          Journal Home
-        </h1>
-        {% if error %}
-        <h2 style="color: red;">Error: {{error}}</h2>
-        {% endif %}
-        <h3>
-            <form action="/search" method="POST">
-              <label for="options">Search By:</label>
-              <select name = "options" id = "options">
-                <option value ="author">Author</option>
-                <option value ="title">Title</option>
-                <option value ="content">Content</option>
-              </select>
-              <br>
-                <input id="txt_fld" type="text" name="query">
-                <input id="submit_btn" type = "submit" name = "search" value = "Search">
-            </form>
-        </h3>
-        <h2>Most Recent Posts</h2>
-        {% for blog in blogs %}
-        <hr>
-        <a href="/post/{{blog[0]}}"><h2>{{ blog[3] }}</h2></a>
-        by {{ blog[1] }}
-        <br>
-        <br>
-        <br>
-        {% endfor %}
-      </div>
     </body>
 </html>

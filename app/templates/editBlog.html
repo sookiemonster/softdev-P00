@@ -4,6 +4,12 @@
     <head>
         <title>Edit Blog Post - Journal Square</title>
         <link href ="../static/css/style.css" rel ="stylesheet" type ="text/css">
+        <link href ="../static/css/blog.css" rel ="stylesheet" type ="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet"> 
     </head>
 
     <body>
@@ -14,22 +20,18 @@
         <a href="/createPosts">Create New Post</a>
         <a href="/logout">Logout</a>
       </nav>
-        <h1>
-          Edit Blog Post
-        </h1>
+      <div class="layout-container">
+        <h1>Edit Blog Post</h1>
         {% if error %}
-        <h2 style="color: red;">Error: {{error}}</h2>
+          <span class="error">Error: {{error}}</span>
         {% endif %}
-        <form action="/editBlog/{{id}}" method="POST">
-            Title:
-            <br>
-              <input type="text" name="title" value ="{{postTitle}}">
-              <br>
-            Post Contents:
-            <br>
-              <textarea name="contents" rows="6">{{postContent}}</textarea>
-            <br>
-            <input type = "submit" name = "update" value = "Update Post">
+        <form class="edit-post-container" action="/editBlog/{{id}}" method="POST">
+            <span class="input-descriptor">Title:</span>
+            <input type="text" name="title" value ="{{postTitle}}" placeholder="Title">
+            <span class="input-descriptor">Post Contents:</span>
+            <textarea class="post-content" name="contents" rows="6" placeholder="Write something here...">{{postContent}}</textarea>
+            <input class="button" type="submit" name="update" value="Update Post">
         </form>
+      </div>
     </body>
 </html>
