@@ -7,38 +7,40 @@
         {% else %}
           <title>Not found - Journal Square</title>
         {% endif %}
-        <link href ="../static/css/style.css" rel = "stylesheet" type ="text/css">
+        <link href ="../static/css/style.css" rel ="stylesheet" type ="text/css">
+        <link href ="../static/css/generalhalf.css" rel ="stylesheet" type ="text/css">
     </head>
 
     <body>
-      <nav class="nav-bar">
+      <div id = "navbar">
         <a href="/">Home</a>
-        <a href="/search">Search</a>
         <a href="/myBlog">My Blog</a>
         <a href="/createPosts">Create New Post</a>
         <a href="/logout">Logout</a>
-     </nav>
-      {% if found %}
-      <h1>
-        {{title}}
-      </h1>
-      <p>By {{ displayName }} @{{author}}</p>
-      <small>
-        {% if date != edit %}
-        {{date}} (Edited: {{edit}})
+      </div>
+      <div id = "not_navbar">
+        {% if found %}
+        <h1>
+          {{title}}
+        </h1>
+        <p>By {{ displayName }} @{{author}}</p>
+        <small>
+          {% if date != edit %}
+          {{date}} (Edited: {{edit}})
+          {% else %}
+          {{date}}
+          {% endif %}
+        </small>
+        <br>
+        <br>
+        <p>{{content}}</p>
         {% else %}
-        {{date}}
-        {% endif %}
-      </small>
-      <br>
-      <br>
-      <p>{{content}}</p>
-      {% else %}
-      {% if error %}
-      <h2 style="color: red;">Error: {{error}}</h2>
-      {% else %}
-        <p>Not found</p>
-      {% endif %}
-      {% endif %}
-    </body>
+        {% if error %}
+        <h2 style="color: red;">Error: {{error}}</h2>
+        {% else %}
+          <p>Not found</p>
+          {% endif %}
+          {% endif %}
+        </body>
+      </div>
 </html>

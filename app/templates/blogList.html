@@ -4,16 +4,18 @@
     <head>
         <title>{{ displayName }}'s Blog - Journal Square</title>
         <link href ="../static/css/style.css" rel ="stylesheet" type ="text/css">
+        <link href ="../static/css/generalhalf.css" rel ="stylesheet" type ="text/css">
     </head>
 
     <body>
-        <nav class="nav-bar">
-            <a href="/">Home</a>
-            <a href="/search">Search</a>
-            <a href="/myBlog">My Blog</a>
-            <a href="/createPosts">Create New Post</a>
-            <a href="/logout">Logout</a>
-        </nav>
+       <div id = "navbar">
+        <a href="/">Home</a>
+        <a href="/search">Search</a>
+        <a href="/myBlog">My Blog</a>
+        <a href="/createPosts">Create New Post</a>
+        <a href="/logout">Logout</a>
+      </div>
+      <div id = "not_navbar">
         <h1>{{ displayName }}'s Blog</h1>
         {% if error %}
         <h2 style="color: red;">Error: {{error}}</h2>
@@ -27,6 +29,7 @@
             Posted: {{blog[2]}}
             {% endif %}
         {% endfor %}
+    </div>
     </body>
 
 </html>

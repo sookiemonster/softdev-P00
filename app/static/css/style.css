@@ -10,6 +10,9 @@
     --black: #000000;
     --page-color: papayawhip;
     --font: "Century Gothic";
+    --padding: 25px;
+    --navbar_decor: none;
+    --navbar-background-color: lightsteelblue;
     --outfit: 'Outfit', sans-serif;
     font-size: 16px;
 }
